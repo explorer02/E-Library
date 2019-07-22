@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">E-Library</string>
+    <string name="please_enter_the_email_address">Please enter the email address associated with your account. A password reset mail containing link to reset password will be sent to your email address.</string>
 </resources>

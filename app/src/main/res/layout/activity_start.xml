@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/book_bg"
+        android:src="@drawable/startactivity_bg"
         android:contentDescription="Background" />
 
     <TextView
@@ -41,12 +41,18 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_start_activity_email"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
         android:layout_below="@+id/tv_start_activity_login"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxStrokeWidth="2dp"
+        app:boxCornerRadiusTopStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
         android:hint="Email Id">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -58,12 +64,19 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_start_activity_pass"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
         android:layout_below="@+id/til_start_activity_email"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:errorEnabled="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxStrokeWidth="2dp"
+        app:boxCornerRadiusTopStart="20dp"
         android:layout_marginEnd="20dp"
+
         android:hint="Password">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -80,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/til_start_activity_pass"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         app:arrow_color="@color/colorWhite"
         app:bg_color="@color/colorAccent"
@@ -89,13 +102,26 @@
         app:text_size="20sp" />
 
     <TextView
-        android:id="@+id/tv_start_activity_new_account"
+        android:id="@+id/tv_start_activity_forgot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_start_activity_login"
+        android:layout_marginTop="20dp"
+        android:text="Forgot Password?"
+        android:onClick="forgotPassword"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_start_activity_new_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_start_activity_forgot"
         android:layout_marginTop="40dp"
+        android:onClick="signUp"
         android:text="Don't have an account?"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#E91E63"
         android:textSize="16sp" />
 </RelativeLayout>
